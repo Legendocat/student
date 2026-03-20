@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="./src/styles/main.css" />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>Проектная работа: полноценный веб-сайт</h1>
+      <p>Фронтенд для работы с API: авторизация, CRUD, поиск, лайки, комментарии.</p>
+    </div>
+    <div class="auth-box">
+      <input id="username" placeholder="Имя" />
+      <input id="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Пароль" />
+      <div class="button-row">
+        <button id="registerBtn">Регистрация</button>
+        <button id="loginBtn">Вход</button>
+        <button id="logoutBtn">Выход</button>
+      </div>
+      <small id="authStatus">Не авторизован</small>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Создать запись</h2>
+      <input id="itemTitle" placeholder="Заголовок" />
+      <textarea id="itemContent" placeholder="Содержимое"></textarea>
+      <input id="itemTags" placeholder="Теги через запятую" />
+      <button id="createItemBtn">Создать</button>
+    </section>
+
+    <section class="panel">
+      <div class="toolbar">
+        <h2>Список записей</h2>
+        <div class="search-row">
+          <input id="searchInput" placeholder="Поиск по названию или тегу" />
+          <button id="searchBtn">Найти</button>
+          <button id="profileBtn">Мой профиль</button>
+        </div>
+      </div>
+      <div id="profileBox" class="profile-box hidden"></div>
+      <div id="itemsList" class="items-list"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/pages/app.js"></script>
+</body>
+</html>
